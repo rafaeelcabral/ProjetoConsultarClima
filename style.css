@@ -1,6 +1,5 @@
 body{
-    background-image: url(img/bg.jpg);
-    background-repeat: no-repeat;
+    background-color: silver;
 }
 
 form{
@@ -9,29 +8,33 @@ form{
 }
 
 form input[type="text"]{
-    background-color: rgba(91, 97, 99, 0);
+    background-color: rgba(6, 17, 20, 0);
     border-bottom: 3px solid white;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    color: rgb(186, 186, 186);
+    color: rgba(6, 17, 20);
 }
 
 form input[type="text"]:focus{
     outline: none;
 }
 
-form p{
-    color: rgb(186, 186, 186);
+form button img{
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
 }
+
+form p{
+    color: white;
+    text-align: left;
+}
+
 
 /*--------BOOTSTRAP--------*/
   /*ExtraSmall devices [até 360px] */
   @media(max-width: 360px){
-    body{
-        background-position: center center;
-    }
-
     form{
         width: 90%;
         height: 50px;
@@ -43,7 +46,7 @@ form p{
     #form_exibir{
         width: 90%;
         height: 250px;
-        margin: 50px auto 0px auto;
+        margin: 100px auto 0px auto;
         padding: 20px;
         text-align: center;
     }
@@ -60,20 +63,10 @@ form p{
         height: 80%;
         font-size: 20px;
     }
-    
-    form button img{
-        width: 25px;
-        height: 30px;
-        cursor: pointer;
-    }
   }
       
   /* Small divices [375px ou +] */
   @media(min-width: 375px){
-    body{
-        background-position: center center;
-    }
-
     form{
         width: 80%;
         height: 50px;
@@ -85,7 +78,7 @@ form p{
     #form_exibir{
         width: 80%;
         height: 250px;
-        margin: 50px auto 0px auto;
+        margin: 150px auto 0px auto;
         padding: 20px;
         text-align: center;
     }
@@ -102,20 +95,10 @@ form p{
         height: 80%;
         font-size: 20px;
     }
-    
-    form button img{
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-    }
   }  
 
   /* Medium devices [768px ou +] */
   @media(min-width: 768px){
-    body{
-        background-position: 0 0 ;
-    }
-
     form{
         width: 70%;
         height: 50px;
@@ -127,7 +110,7 @@ form p{
     #form_exibir{
         width: 70%;
         height: 250px;
-        margin: 150px auto 0px auto;
+        margin: 200px auto 0px auto;
         padding: 20px;
         text-align: center;
     }
@@ -144,24 +127,14 @@ form p{
         height: 80%;
         font-size: 30px;
     }
-    
-    form button img{
-        width: 25px;
-        height: 30px;
-        cursor: pointer;
-    }
   }    
       
   /* Large devices [992px ou +] */
   @media(min-width: 992px){
-    body{
-        background-position: center center;
-    }
-
     form{
         width: 50%;
         height: 50px;
-        margin: 300px auto 0px auto;
+        margin: 250px auto 0px auto;
         padding: 20px;
         text-align: center;
     }
@@ -169,7 +142,7 @@ form p{
     #form_exibir{
         width: 50%;
         height: 270px;
-        margin: 80px auto 0px auto;
+        margin: 150px auto 0px auto;
         padding: 20px;
         text-align: center;
     }
@@ -186,12 +159,6 @@ form p{
         height: 70%;
         font-size: 40px;
         padding: 10px;
-    }
-    
-    form button img{
-        width: 25px;
-        height: 30px;
-        cursor: pointer;
     }
   }
 /*-----------------------------*/
