@@ -39,6 +39,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         <?php
 
+            /* ------------- Lógica das figuras de acordo com o tempo ----------------*/
+            if(($consulta['weather']['0']['description']) == 'nublado'){
+
+                echo '
+                    <img src="img/nublado.png" class="imagedescription"></img>
+                ';
+
+            }
+
+            if(($consulta['weather']['0']['description']) == 'chuva'){
+
+                echo '
+                    <img src="img/chuva.png" class="imagedescription"></img>
+                ';
+
+            }
+            /* ------------------------------------------------------------------------*/
+
             echo '<h2>' . ($cidade) . '</h2>';
             echo'<p>Nuvens => ' . ($consulta['weather']['0']['description']) . '</p><br>';
             echo'<p>Temperatura => ' . ($consulta['main']['temp']) . '°C</p><br>';
