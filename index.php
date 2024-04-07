@@ -55,6 +55,38 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 ';
 
             }
+
+            if(($consulta['weather']['0']['description']) == 'chuva forte'){
+
+                echo '
+                    <img src="img/chuvaforte.png" class="imagedescription"></img>
+                ';
+
+            }
+
+            if(($consulta['weather']['0']['description']) == 'algumas nuvens'){
+
+                echo '
+                    <img src="img/algumasnuvens.png" class="imagedescription"></img>
+                ';
+
+            }
+
+            if(($consulta['weather']['0']['description']) == 'neve'){
+
+                echo '
+                    <img src="img/neve.png" class="imagedescription"></img>
+                ';
+
+            }
+
+            if(($consulta['weather']['0']['description']) == 'céu limpo'){
+
+                echo '
+                    <img src="img/ceulimpo.png" class="imagedescription"></img>
+                ';
+
+            }
             /* ------------------------------------------------------------------------*/
 
             echo '<h2>' . ($cidade) . '</h2>';
