@@ -40,34 +40,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <?php
 
             /* ------------- Lógica das figuras de acordo com o tempo ----------------*/
-            if(($consulta['weather']['0']['description']) == 'nublado'){
 
-                echo '
-                    <img src="img/nublado.png" class="imagedescription"></img>
-                ';
-
-            }
-
-            if(($consulta['weather']['0']['description']) == 'chuva'){
-
-                echo '
-                    <img src="img/chuva.png" class="imagedescription"></img>
-                ';
-
-            }
-
-            if(($consulta['weather']['0']['description']) == 'chuva forte'){
-
-                echo '
-                    <img src="img/chuvaforte.png" class="imagedescription"></img>
-                ';
-
-            }
+            /*
+              - Algumas Nuvens -> ok;
+              - Céu Limpo / Ensolarado -> ok;
+              - Chuva / Chuva Leve / Chuva Forte -> ok;
+              - Neve -> * ;
+              - Nublado -> * ;
+            */
 
             if(($consulta['weather']['0']['description']) == 'algumas nuvens'){
 
                 echo '
                     <img src="img/algumasnuvens.png" class="imagedescription"></img>
+                ';
+
+            }
+
+            if(($consulta['weather']['0']['description']) == 'céu limpo' || ($consulta['weather']['0']['description']) == 'ensolarado'){
+
+                echo '
+                    <img src="img/ceulimpo.png" class="imagedescription"></img>
+                ';
+
+            }
+
+            if(($consulta['weather']['0']['description']) == 'chuva' || ($consulta['weather']['0']['description']) == 'chuva leve' || ($consulta['weather']['0']['description']) == 'chuva forte'){
+
+                echo '
+                    <img src="img/chuva.png" class="imagedescription"></img>
                 ';
 
             }
@@ -80,13 +81,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             }
 
-            if(($consulta['weather']['0']['description']) == 'céu limpo'){
+            if(($consulta['weather']['0']['description']) == 'nublado'){
 
                 echo '
-                    <img src="img/ceulimpo.png" class="imagedescription"></img>
+                    <img src="img/nublado.png" class="imagedescription"></img>
                 ';
 
             }
+
             /* ------------------------------------------------------------------------*/
 
             echo '<h2>' . ($cidade) . '</h2>';
