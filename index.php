@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               - Nublado -> ok;
             */
 
-            if(($consulta['weather']['0']['description']) == 'algumas nuvens'){
+            if(($consulta['weather']['0']['description']) == 'algumas nuvens' || ($consulta['weather']['0']['description']) == 'nuvens dispersas'){
 
                 echo '
                     <img src="img/algumasnuvens.png" class="imagedescription"></img>

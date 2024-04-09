@@ -112,13 +112,13 @@ form button img{
     form{
         width: 70%;
         height: 50px;
-        margin: 250px auto 0px auto;
+        margin: 350px auto 0px auto;
         padding: 20px;
         text-align: center;
     }
 
     #form_exibir{
-        width: 90%;
+        width: 80%;
         height: 350px;
         margin: 200px auto 0px auto;
         padding: 20px;
