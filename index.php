@@ -45,8 +45,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               - Algumas Nuvens -> ok;
               - Céu Limpo / Ensolarado -> ok;
               - Chuva / Chuva Leve / Chuva Forte -> ok;
-              - Neve -> * ;
-              - Nublado -> * ;
+              - Neve -> ok;
+              - Nublado -> ok;
             */
 
             if(($consulta['weather']['0']['description']) == 'algumas nuvens'){
