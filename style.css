@@ -9,11 +9,11 @@ form{
 
 form input[type="text"]{
     background-color: rgba(6, 17, 20, 0);
-    border-bottom: 3px solid white;
+    color: rgba(6, 17, 20);
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    color: rgba(6, 17, 20);
+    border-bottom: 3px solid white;
 }
 
 form input[type="text"]:focus{
@@ -30,7 +30,7 @@ form button{
 }
 
 form button:hover{
-    background-color: rgba(255, 242, 0, 0.90);
+    background-color: rgba(247, 235, 3, 0.90);
 }
 
 form button img{
