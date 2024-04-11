@@ -20,10 +20,22 @@ form input[type="text"]:focus{
     outline: none;
 }
 
+form button{
+    background-color: rgba(247, 235, 3, 0.60);
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: rgba(255, 242, 0, 0.90);
+}
+
 form button img{
     width: 25px;
     height: 30px;
-    cursor: pointer;
 }
 
 /*--------BOOTSTRAP--------*/
@@ -168,7 +180,7 @@ form button img{
         width: 50%;
         height: 400px;
         margin: 100px auto 0px auto;
-        padding: 20px;
+        padding: 30px;
         text-align: center;
     }
 
