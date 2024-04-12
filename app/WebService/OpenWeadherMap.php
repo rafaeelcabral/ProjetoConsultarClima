@@ -12,6 +12,12 @@ class OpenWeadherMap{
         $this->apiKey = $apiKey;
     }
 
+    public function ConsultarClima($cidade){
+        return $this->get('/data/2.5/weather',[
+            'q' => $cidade
+        ]);
+    }
+
     private function get($resources, $params = []){
 
         $params['units'] = 'metric';
@@ -38,12 +44,6 @@ class OpenWeadherMap{
 
         return json_decode($response,true);
 
-    }
-
-    public function ConsultarClima($cidade){
-        return $this->get('/data/2.5/weather',[
-            'q' => $cidade
-        ]);
     }
 
 }

@@ -24,8 +24,7 @@ form button{
     background-color: rgba(247, 235, 3, 0.60);
     border: 1px solid black;
     border-radius: 50px;
-    width: 50px;
-    height: 50px;
+    width: 55px;
     cursor: pointer;
 }
 
@@ -55,23 +54,39 @@ form button img{
 
     #form_exibir{
         width: 90%;
-        height: 250px;
-        margin: 100px auto 0px auto;
+        height: 200px;
+        margin: 150px auto 0px auto;
         padding: 20px;
         text-align: center;
     }
 
     #form_exibir h2{
+        color: goldenrod;
         margin-top: 5px;
         font-weight: bold;
         font-size: 25px;
-        text-align: center;
+        text-align: left;
     }
     
     form input[type="text"]{
         width: 80%;
         height: 80%;
         font-size: 20px;
+    }
+
+    form p{
+        color: white;
+        text-align: left;
+        width: 50%;
+        font-size: 11.5px;
+    }
+
+    form .imagedescription{
+        float: right;
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+        margin-right: 15px;
     }
   }
       
@@ -83,21 +98,54 @@ form button img{
 
     form{
         width: 80%;
-        height: 50px;
-        margin: 250px auto 0px auto;
-        padding: 20px;
-        text-align: center;
-    }
-
-    #form_exibir{
-        width: 80%;
-        height: 250px;
+        height: 200px;
         margin: 150px auto 0px auto;
         padding: 20px;
         text-align: center;
     }
 
+    form select{
+        background-color: rgba(6, 17, 20, 0);
+        width: 90%;
+        height: 50px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        padding: 0px 0px 0px 10px;
+        border: 1px solid goldenrod;
+        border-radius: 20px;
+        color: goldenrod;
+        font-weight: bold;
+    }
+
+    form select:focus{
+        outline: none;
+    }
+
+    form select option{
+        color: black;
+    }
+
+    form input[type="text"]{
+        width: 80%;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    form button{
+        margin-top: 25px;
+        height: 50px;
+    }
+
+    #form_exibir{
+        width: 80%;
+        height: 200px;
+        margin: 200px auto 0px auto;
+        padding: 20px;
+        text-align: center;
+    }
+
     #form_exibir h2{
+        color: goldenrod;
         margin-top: 5px;
         font-weight: bold;
         font-size: 30px;
@@ -105,25 +153,19 @@ form button img{
         text-align: left;
     }
 
+    form .imagedescription{
+        float: right;
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+        margin-right: 15px;
+    }
+
     form p{
         color: white;
         text-align: left;
         width: 50%;
         font-size: 11.5px;
-    }
-    
-    form input[type="text"]{
-        width: 80%;
-        height: 80%;
-        font-size: 20px;
-    }
-
-    form .imagedescription{
-        float: right;
-        width: 100px;
-        height: 100px;
-        margin-top: 80px;
-        margin-right: 15px;
     }
   }  
 
@@ -135,10 +177,40 @@ form button img{
 
     form{
         width: 70%;
-        height: 50px;
-        margin: 350px auto 0px auto;
+        height: 200px;
+        margin: 300px auto 0px auto;
         padding: 20px;
-        text-align: center;
+    }
+
+    form select{
+        background-color: rgba(6, 17, 20, 0);
+        width: 90%;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        padding: 0px 0px 0px 10px;
+        border: 1px solid goldenrod;
+        border-radius: 20px;
+        color: goldenrod;
+        font-weight: bold;
+    }
+
+    form select:focus{
+        outline: none;
+    }
+
+    form select option{
+        color: black;
+    }
+
+    form input[type="text"]{
+        width: 80%;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    form button{
+        height: 50px;
     }
 
     #form_exibir{
@@ -150,16 +222,11 @@ form button img{
     }
 
     #form_exibir h2{
+        color: goldenrod;
         margin-top: 5px;
         font-weight: bold;
         font-size: 45px;
         text-align: left;
-    }
-    
-    form input[type="text"]{
-        width: 80%;
-        height: 80%;
-        font-size: 30px;
     }
 
     form .imagedescription{
@@ -181,15 +248,53 @@ form button img{
   /* Large devices [992px ou +] */
   @media(min-width: 992px){
     body{
-        background-image: url("https://source.unsplash.com/1600x695/?landscape");
+        background-image: url(img/bg.png);
+        background-size: cover;
     }
 
     form{
-        width: 40%;
-        height: 50px;
+        width: 50%;
+        height: 60px;
         margin: 250px auto 0px auto;
-        padding: 20px;
+        padding: 30px;
         text-align: center;
+    }
+    
+    form select{
+        background-color: rgba(6, 17, 20, 0);
+        width: 140px;
+        height: 70%;
+        padding: 0px 0px 0px 10px;
+        margin: 0;
+        border: 1px solid goldenrod;
+        border-radius: 20px;
+        color: goldenrod;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    form select:focus{
+        outline: none;
+    }
+
+    form select option{
+        color: black;
+    }
+
+    form input[type="text"]{
+        width: 60%;
+        height: 70%;
+        font-size: 30px;
+        padding: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    form button{
+        height: 100%;
+        margin: 0px;
     }
 
     #form_exibir{
@@ -201,17 +306,11 @@ form button img{
     }
 
     #form_exibir h2{
+        color: goldenrod;
         margin-top: 5px;
         font-weight: bold;
         font-size: 60px;
         text-align: left;
-    }
-    
-    form input[type="text"]{
-        width: 80%;
-        height: 70%;
-        font-size: 40px;
-        padding: 10px;
     }
 
     form .imagedescription{

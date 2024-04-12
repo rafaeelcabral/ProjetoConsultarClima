@@ -1,21 +1,54 @@
 <?php
 
 use \App\WebService\OpenWeadherMap;
+use \App\WebService\WorldTimeAPI;
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
+    $continente = $_POST['continente'];
     $cidade = $_POST['cidade'];
+
+    //echo'<pre>';
+    //print_r($continente);
+    //echo'</pre>'; exit;
 
     require __DIR__.'/vendor/autoload.php';
 
     $obOpenWeadherMap = new OpenWeadherMap('8a85fddd8be674738a25e8bec27e31cc');
+    $obWorldTimeAPI = new WorldTimeAPI();
 
     $consulta = $obOpenWeadherMap->ConsultarClima($cidade);
+    $consultaHora = $obWorldTimeAPI->ConsultarHora($continente, $cidade);
+
+    //----------------CONFIGURANDO OS DADOS DO ARRAY PARA EXTRAIR A DATA E A HORA----------------------//
+
+        // Obtém a hora e o offset UTC do array
+    $utc_datetime = new DateTime($consultaHora['utc_datetime']);
+
+    // Obtém o offset UTC do array
+    $utc_offset = $consultaHora['utc_offset'];
+
+    // Extrai as horas do offset
+    $sinal = substr($utc_offset, 0, 1); // Extrai o primeiro caractere
+    $horas = abs((int) substr($utc_offset, 1, 2)); // Extrai o 3º e 4º caractere e garante um número positivo
+
+    // Formata o offset para o formato correto do DateInterval
+    $offset_formatado = sprintf("PT%dH", $horas);
+
+    // Cria o DateInterval
+    $utc_offset_interval = new DateInterval($offset_formatado);
+
+    // Adiciona ou Subtrai o offset da hora para obter a hora correta
+    if ($sinal == '+') {
+        $hora_correta = $utc_datetime->add($utc_offset_interval);
+    } else {
+        $hora_correta = $utc_datetime->sub($utc_offset_interval);
+    }
+
+    // -----------------------------------------------------------------------------------------------//
 
     //echo'<pre>';
-        //echo'Nuvens => '; print_r($consulta['weather']['0']['description']); echo'<br>';
-        //echo'Temperatura => '; print_r($consulta['main']['temp']); echo'<br>';
-        //echo'Sensação Térmica => '; print_r($consulta['main']['feels_like']); echo'<br>';
+    //    print_r($hora_correta->format('H:i:s'));
     //echo'</pre>'; exit;
 
 }
@@ -92,9 +125,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             /* ------------------------------------------------------------------------*/
 
             echo '<h2>' . ($cidade) . '</h2>';
-            echo'<p>Nuvens => ' . ($consulta['weather']['0']['description']) . '</p><br>';
-            echo'<p>Temperatura => ' . ($consulta['main']['temp']) . '°C</p><br>';
-            echo'<p>Sensação Térmica => ' . ($consulta['main']['feels_like']) . '°C</p><br>';
+            echo'<p>Hora => ' . ($hora_correta->format('H:i:s')) . '</p>'; 
+            echo'<p>Clima => ' . ($consulta['weather']['0']['description']) . '</p>';
+            echo'<p>Temperatura => ' . ($consulta['main']['temp']) . '°C</p>';
+            echo'<p>Sensação Térmica => ' . ($consulta['main']['feels_like']) . '°C</p>';
 
         ?>
 
