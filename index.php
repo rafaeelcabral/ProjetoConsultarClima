@@ -98,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             }
 
-            if(($consulta['weather']['0']['description']) == 'chuva' || ($consulta['weather']['0']['description']) == 'chuva leve' || ($consulta['weather']['0']['description']) == 'chuva forte'){
+            if(($consulta['weather']['0']['description']) == 'chuva' || ($consulta['weather']['0']['description']) == 'chuva moderada' ||($consulta['weather']['0']['description']) == 'chuva leve' || ($consulta['weather']['0']['description']) == 'chuva forte'){
 
                 echo '
                     <img src="img/chuva.png" class="imagedescription"></img>
