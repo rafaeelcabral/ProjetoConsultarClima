@@ -3,13 +3,13 @@ body{
 }
 
 form{
-    background-color: rgba(6, 17, 20, 0.60);
+    background-color: rgba(6, 17, 20, 0.8);
     border-radius: 20px;
 }
 
 form input[type="text"]{
     background-color: rgba(6, 17, 20, 0);
-    color: rgba(6, 17, 20);
+    color: white;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -39,8 +39,12 @@ form button img{
 }
 
 /*--------BOOTSTRAP--------*/
-  /*ExtraSmall devices [até 360px] */
-  @media(max-width: 360px){
+  /*ExtraSmall devices [até 375px] */
+  @media(max-width: 376px){
+    body{
+        background-image: url("https://source.unsplash.com/375x800/?landscape");
+    }
+
     form{
         width: 90%;
         height: 50px;
@@ -71,8 +75,12 @@ form button img{
     }
   }
       
-  /* Small divices [375px ou +] */
-  @media(min-width: 375px){
+  /* Small divices [376px ou +] */
+  @media(min-width: 377px){
+    body{
+        background-image: url("https://source.unsplash.com/425x925/?landscape");
+    }
+
     form{
         width: 80%;
         height: 50px;
@@ -121,6 +129,10 @@ form button img{
 
   /* Medium devices [768px ou +] */
   @media(min-width: 768px){
+    body{
+        background-image: url("https://source.unsplash.com/835x1300/?landscape");
+    }
+
     form{
         width: 70%;
         height: 50px;
@@ -199,7 +211,6 @@ form button img{
         width: 80%;
         height: 70%;
         font-size: 40px;
-        color: white;
         padding: 10px;
     }
 
