@@ -248,7 +248,7 @@ form button img{
   /* Large devices [992px ou +] */
   @media(min-width: 992px){
     body{
-        background-image: url("https://source.unsplash.com/1600x695/?landscape");
+        background-image: url("https://source.unsplash.com/1600x750/?landscape");
         background-size: cover;
     }
 
