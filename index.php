@@ -2,13 +2,13 @@
 
 use \App\WebService\OpenWeadherMap;
 
+require __DIR__.'/vendor/autoload.php';
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $cidade = $_POST['cidade'];
 
-    require __DIR__.'/vendor/autoload.php';
-
-    $obOpenWeadherMap = new OpenWeadherMap('8a85fddd8be674738a25e8bec27e31cc');
+    $obOpenWeadherMap = new OpenWeadherMap();
 
     $consulta = $obOpenWeadherMap->ConsultarClima($cidade);
 
