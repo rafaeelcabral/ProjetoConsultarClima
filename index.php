@@ -2,6 +2,7 @@
 
 use \App\WebService\OpenWeadherMap;
 use \App\WebService\WorldTimeAPI;
+require __DIR__.'/vendor/autoload.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -12,9 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //print_r($continente);
     //echo'</pre>'; exit;
 
-    require __DIR__.'/vendor/autoload.php';
-
-    $obOpenWeadherMap = new OpenWeadherMap('8a85fddd8be674738a25e8bec27e31cc');
+    $obOpenWeadherMap = new OpenWeadherMap();
     $obWorldTimeAPI = new WorldTimeAPI();
 
     $consulta = $obOpenWeadherMap->ConsultarClima($cidade);

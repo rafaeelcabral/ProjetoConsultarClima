@@ -4,27 +4,19 @@ namespace App\WebService;
 
 class OpenWeadherMap{
 
-    const BASE_URL = 'https://api.openweathermap.org';
-
-    private $apiKey;
-
-    public function __construct($apiKey){
-        $this->apiKey = $apiKey;
-    }
+    const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
     public function ConsultarClima($cidade){
-        return $this->get('/data/2.5/weather',[
-            'q' => $cidade
-        ]);
+        return $this->get(['q' => $cidade]);
     }
 
-    private function get($resources, $params = []){
+    private function get($params = []){
 
         $params['units'] = 'metric';
         $params['lang'] = 'pt_br';
-        $params['appid'] = $this->apiKey;
+        $params['appid'] = '8a85fddd8be674738a25e8bec27e31cc';
 
-        $endpoint = self :: BASE_URL . $resources . '?' . http_build_query($params);
+        $endpoint = self :: BASE_URL . '?' . http_build_query($params);
 
         // ------ CONFIGURANDO CURL -------
 
