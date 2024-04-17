@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     //----------------CONFIGURANDO OS DADOS DO ARRAY PARA EXTRAIR A DATA E A HORA----------------------//
 
-        // Obtém a hora e o offset UTC do array
+    // Obtém a hora e o offset UTC do array
     $utc_datetime = new DateTime($consultaHora['utc_datetime']);
 
     // Obtém o offset UTC do array
